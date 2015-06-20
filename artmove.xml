@@ -19,13 +19,40 @@
                 <next>
                   <block type="movement_stutter" id="57">
                     <next>
-                      <block type="movement_right" id="67">
+                      <block type="robot_delay" id="138" inline="true">
+                        <value name="DELAY">
+                          <block type="math_number" id="149">
+                            <field name="NUM">2000</field>
+                          </block>
+                        </value>
                         <next>
-                          <block type="movement_left" id="77">
+                          <block type="movement_right" id="67">
                             <next>
-                              <block type="movement_reverse" id="87">
+                              <block type="robot_delay" id="140" inline="true">
+                                <value name="DELAY">
+                                  <block type="math_number" id="156">
+                                    <field name="NUM">2000</field>
+                                  </block>
+                                </value>
                                 <next>
-                                  <block type="movement_stop" id="103"></block>
+                                  <block type="movement_left" id="77">
+                                    <next>
+                                      <block type="robot_delay" id="142" inline="true">
+                                        <value name="DELAY">
+                                          <block type="math_number" id="163">
+                                            <field name="NUM">2000</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="movement_reverse" id="87">
+                                            <next>
+                                              <block type="movement_stop" id="103"></block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
                                 </next>
                               </block>
                             </next>
