@@ -1,37 +1,31 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="110" inline="false" x="121" y="26">
-    <field name="MODE">UNTIL</field>
-    <value name="NUMBER">
-      <block type="sensor_button" id="120">
-        <field name="OBJECT">ENTER</field>
-      </block>
-    </value>
-    <statement name="DO">
-      <block type="movement_stutter" id="10">
+  <block type="movement_stutter" id="10" x="379" y="297">
+    <next>
+      <block type="robot_delay" id="12" inline="true">
+        <value name="DELAY">
+          <block type="math_number" id="19">
+            <field name="NUM">5000</field>
+          </block>
+        </value>
         <next>
-          <block type="robot_delay" id="12" inline="true">
-            <value name="DELAY">
-              <block type="math_number" id="19">
-                <field name="NUM">5000</field>
-              </block>
-            </value>
+          <block type="movement_forward" id="38">
             <next>
-              <block type="movement_forward" id="38">
+              <block type="robot_delay" id="40" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="47">
+                    <field name="NUM">2000</field>
+                  </block>
+                </value>
                 <next>
-                  <block type="robot_delay" id="40" inline="true">
-                    <value name="DELAY">
-                      <block type="math_number" id="47">
-                        <field name="NUM">2000</field>
-                      </block>
-                    </value>
+                  <block type="movement_stutter" id="57">
                     <next>
-                      <block type="movement_stutter" id="57">
+                      <block type="movement_right" id="67">
                         <next>
-                          <block type="movement_right" id="67">
+                          <block type="movement_left" id="77">
                             <next>
-                              <block type="movement_left" id="77">
+                              <block type="movement_reverse" id="87">
                                 <next>
-                                  <block type="movement_reverse" id="87"></block>
+                                  <block type="movement_stop" id="103"></block>
                                 </next>
                               </block>
                             </next>
@@ -46,9 +40,6 @@
           </block>
         </next>
       </block>
-    </statement>
-    <next>
-      <block type="movement_stop" id="103"></block>
     </next>
   </block>
 </xml>
